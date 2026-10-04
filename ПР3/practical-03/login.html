@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Форма входу до навчального порталу групи П-425.">
+        <title>Вхід — Навчальний портал</title>
+    </head>
+    <body>
+        <a href="#main-content">Перейти до основного вмісту</a>
+        <header>
+            <h1>Вхід</h1>
+            <nav aria-label="Навігація">
+                <ul>
+                <li><a href="index.html">Головна сторінка</a></li>
+                <li><a href="register.html">Реєстрація</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section>
+                <h2>Вхід до облікового запису</h2>
+                <p>Введіть електронну пошту та пароль.</p>
+
+                <form action="/login" method="post">
+                <div>
+                    <label for="login-email">Електронна пошта</label>
+                    <input id="login-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="login-password">Пароль</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit">Увійти</button>
+                </form>
+
+                <p>Немає облікового запису? <a href="register.html">Зареєструватися</a></p>
+            </section>
+        </main>
+
+        <footer><p>&copy; 2026 БФКПЕП</p></footer>
+    </body>
+</html>

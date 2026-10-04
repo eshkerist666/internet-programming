@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Форма реєстрації користувача навчального порталу групи П-425.">
+        <title>Реєстрація — Навчальний портал</title>
+    </head>
+    <body>
+        <a href="#main-content">Перейти до основного вмісту</a>
+        <header>
+            <h1>Реєстрація</h1>
+            <nav aria-label="Навігація">
+                <ul>
+                    <li><a href="index.html">Головна сторінка</a></li>
+                    <li><a href="login.html">Увійти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section>
+            <h2>Створення облікового запису</h2>
+
+                <form action="/register" method="post">
+                <div>
+                    <label for="register-name">Ім'я користувача</label>
+                    <input id="register-name" name="displayName" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+                </div>
+
+                <div>
+                    <label for="register-email">Електронна пошта</label>
+                    <input id="register-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="register-password">Пароль</label>
+                    <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" aria-describedby="password-hint" required>
+                </div>
+
+                <div>
+                    <label for="register-password-confirm">Підтвердження пароля</label>
+                    <input id="register-password-confirm" name="passwordConfirmation" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <fieldset>
+                    <legend>Роль користувача</legend>
+                    <label><input type="radio" name="role" value="student" checked> Студент</label>
+                    <label><input type="radio" name="role" value="teacher"> Викладач</label>
+                </fieldset>
+                <p>
+                    <label>
+                    <input type="checkbox" name="notifications" value="accepted">
+                    Надсилати новини на електронну пошту
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input type="checkbox" name="terms" value="accepted" required>
+                    Погоджуюся з правилами навчального порталу
+                    </label>
+                </p>
+
+                <button type="submit">Зареєструватися</button>
+            </form>
+
+            <p>Вже маєте обліковий запис? <a href="login.html">Увійти</a></p>
+            </section>
+        </main>
+
+        <footer><p>&copy; 2026 БФКПЕП</p></footer>
+    </body>
+</html>

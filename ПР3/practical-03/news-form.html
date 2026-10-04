@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Форма додавання новини на навчальний портал групи П-425.">
+        <title>Додати новину — Навчальний портал</title>
+    </head>
+    <body>
+        <a href="#main-content">Перейти до основного вмісту</a>
+
+        <header>
+            <h1>Додати новину</h1>
+            <nav aria-label="Навігація">
+                <ul>
+                    <li><a href="index.html">Головна сторінка</a></li>
+                    <li><a href="login.html">Увійти</a></li>
+                    <li><a href="register.html">Реєстрація</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section>
+                <h2>Форма додавання новини</h2>
+                <p>Заповніть дані новини.</p>
+
+                <form action="/news" method="post">
+                    <div>
+                        <label for="news-title">Назва новини</label>
+                        <input id="news-title" name="title" type="text" minlength="3" maxlength="80" aria-describedby="news-title-hint" required>
+                    </div>
+
+                    <div>
+                        <label for="news-description">Текст новини</label>
+                        <textarea id="news-description" name="description" minlength="10" maxlength="1000" rows="8" aria-describedby="news-description-hint" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="news-category">Категорія новини</label>
+                        <select id="news-category" name="category" required>
+                            <option value="">Оберіть категорію</option>
+                            <option value="education">Навчання</option>
+                            <option value="events">Події</option>
+                            <option value="announcements">Оголошення</option>
+                            <option value="sport">Спорт</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="news-date">Дата публікації</label>
+                        <input id="news-date" name="publicationDate" type="date" required>
+                    </div>
+
+                    <fieldset>
+                        <legend>Видимість новини</legend>
+                        <label><input type="radio" name="visibility" value="all" checked> Усі відвідувачі</label>
+                        <label><input type="radio" name="visibility" value="registered"> Лише зареєстровані користувачі</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Додаткові параметри</legend>
+                        <label><input type="checkbox" name="comments" value="allowed"> Дозволити коментарі</label>
+                        <label><input type="checkbox" name="featured" value="yes"> Позначити як важливу</label>
+                        <label><input type="checkbox" name="notification" value="yes"> Відобразити при відвідувані сайту</label>
+                    </fieldset>
+
+                    <button type="submit">Опублікувати новину</button>
+                    <a href="index.html">Скасувати</a>
+                </form>
+            </section>
+        </main>
+
+        <footer><p>&copy; 2026 БФКПЕП</p></footer>
+    </body>
+</html>
