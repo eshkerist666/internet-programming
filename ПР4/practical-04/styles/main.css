@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
+
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    --font-manrope: "Manrope", sans-serif;
+    
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-gray-100);
+    font-family: var(--font-manrope);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 75px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.header-body {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    height: 100%;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    margin-left: auto;
+}
+
+main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 90px;
+    gap:20px
+}
+
+footer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px auto;
+    align-items: center;
+}
+
+section {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+section h2 {
+    margin: 0px;
+}
+
+figure {
+    text-align: center;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.schedule-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: var(--shadow-md)
+}
+
+.schedule-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-card ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.schedule-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-card li:last-child {
+    border-bottom: none;
+}
+
+.schedule-card li span {
+    display: inline-block;
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.login {
+    width: 350px;
+}
+
+button {
+    height: 42px;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+    color: var(--color-white);
+    cursor: pointer;
+    font-family: var(--font-manrope);
+    font-size: large;
+    border: 1px solid rgb(41, 40, 40);
+    border-radius: 10px;
+    padding: 5px 15px;
+
+    transition: 
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(41, 40, 40, 0.932);
+    border-color: rgba(41, 40, 40, 0.932);
+    box-shadow: var(--shadow-md);
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+    width: 100%;
+    height: 42px;
+    font-size: large;
+    font-family: var(--font-manrope);
+    border: 1px solid var(--color-gray-500);
+    border-radius: 8px;
+    padding: 0px 10px;
+    outline: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: 
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus {
+    border-color: var(--color-gray-600);
+    box-shadow: var(--shadow-md);
+}
+
+.register-link {
+    font-size: medium;
+    color: var(--color-gray-500);
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+
+}
+
+
+.group-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.role-options {
+    display: flex;
+    gap: 24px;
+}
+
+.role-options label,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.role-options input,
+.checkbox-option input {
+    accent-color: rgb(41, 40, 40);
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 22px 0;
+}
+
+.checkbox-option {
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.checkbox-option input {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+textarea,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--font-manrope);
+    font-size: 16px;
+    border: 1px solid var(--color-gray-500);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--color-white);
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+select {
+    height: 42px;
+    cursor: pointer;
+}
+
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-gray-600);
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.group-title {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.option-item input {
+    width: 16px;
+    height: 16px;
+    margin: 4px 0 0;
+    padding: 0;
+    flex-shrink: 0;
+    accent-color: rgb(41, 40, 40);
+    cursor: pointer;
+}
+
+.option-item span {
+    flex: 1;
+}
+
