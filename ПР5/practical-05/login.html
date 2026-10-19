@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Форма входу до навчального порталу групи П-425.">
+        <link rel="stylesheet" href="styles/main.css">
+        <title>Вхід — Навчальний портал</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-body">
+                <img
+                    src="images/logo.png"
+                    alt="Логотип коледжу»"
+                    width="100"
+                >
+            
+                <h1>БФКПЕП</h1>
+            
+                <nav aria-label="Основна навігація">
+                    <ul>
+                        <li><a href="index.html#about">Про коледж</a></li>
+                        <li><a href="index.html#schedule">Розклад</a></li>
+                        <li><a href="index.html#news">Новини</a></li>
+                        <li><a href="index.html#contacts">Контакти</a></li>
+                        <li><a href="login.html">Увійти</a></li>
+                        <li><a href="register.html">Реєстрація</a></li>
+                        <li><a href="news-form.html">Додати новину</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content" class="login">
+            <section>
+                <h2>Вхід до облікового запису</h2>
+                <p>Введіть електронну пошту та пароль.</p>
+
+                <form action="/login" method="post">
+                    <div>
+                        <label for="login-email">Електронна пошта</label>
+                        <input placeholder="example@gmail.com" id="login-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div>
+                        <label for="login-password">Пароль</label>
+                        <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                    </div>
+
+                    <button type="submit">Увійти</button>
+                </form>
+                <a class="register-link" href="register.html">Немає облікового запису? Зареєструватися</a>
+            </section>
+        </main>
+
+        <footer><p>&copy; 2026 БФКПЕП</p></footer>
+    </body>
+</html>
