@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Форма додавання новини на навчальний портал групи П-425.">
+        <link rel="stylesheet" href="styles/main.css">
+        <title>Додати новину — Навчальний портал</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-body">
+                <img
+                    src="images/logo.png"
+                    alt="Логотип коледжу»"
+                    width="100"
+                >
+            
+                <h1>БФКПЕП</h1>
+            
+                <nav aria-label="Основна навігація">
+                    <ul>
+                        <li><a href="index.html#about">Про коледж</a></li>
+                        <li><a href="index.html#schedule">Розклад</a></li>
+                        <li><a href="index.html#news">Новини</a></li>
+                        <li><a href="index.html#contacts">Контакти</a></li>
+                        <li><a href="login.html">Увійти</a></li>
+                        <li><a href="register.html">Реєстрація</a></li>
+                        <li><a href="news-form.html">Додати новину</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section>
+                <h2>Форма додавання новини</h2>
+                <p id="form-intro">Заповніть дані новини.</p>
+
+                <form id="news-form">
+                    <div>
+                        <label for="news-title">Назва новини</label>
+                        <input id="news-title" name="title" type="text" minlength="3" maxlength="80" required>
+                    </div>
+                    <div>
+                        <label for="news-text">Текст новини</label>
+                        <textarea id="news-text" name="text" minlength="10" maxlength="1000" rows="8" required></textarea>
+                    </div>
+                    <div>
+                        <label for="news-category">Категорія новини</label>
+                        <select id="news-category" name="category" required>
+                            <option value="">Оберіть категорію</option>
+                            <option value="навчання">Навчання</option>
+                            <option value="подія">Події</option>
+                            <option value="оголошення">Оголошення</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="news-date">Дата публікації</label>
+                        <input id="news-date" name="date" type="date" required>
+                    </div>
+                    <div>
+                        <label for="news-priority">Пріоритет (1–5)</label>
+                        <input id="news-priority" name="priority" type="number" min="1" max="5" step="1" value="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="option-item" for="news-visible">
+                            <input id="news-visible" name="isVisible" type="checkbox" checked>
+                            <span>Показувати новину на сайті</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="option-item" for="news-pinned">
+                            <input id="news-pinned" name="isPinned" type="checkbox">
+                            <span>Закріпити як важливу</span>
+                        </label>
+                    </div>
+                    <p id="news-form-message" role="status" aria-live="polite"></p>
+                    <button id="news-submit" type="submit">Опублікувати новину</button>
+                    <a href="index.html" class="register-link">Скасувати</a>
+                </form>
+            </section>
+        </main>
+
+        <footer><p>&copy; 2026 БФКПЕП</p></footer>
+        <script type="module" src="scripts/news-form-page.js"></script>
+    </body>
+</html>

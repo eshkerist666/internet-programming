@@ -1,0 +1,10 @@
+{
+  "name": "bfkpep-news-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/news-service.test.js",
+    "serve": "node scripts/dev-server.js"
+  }
+}
